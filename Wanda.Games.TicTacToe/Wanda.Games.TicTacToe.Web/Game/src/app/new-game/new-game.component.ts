@@ -11,6 +11,17 @@ import { Player } from '../shared/models/player.model';
 export class NewGameComponent implements OnInit {
   title = 'Tic Tac Toe';
   playerList: Player[];
+  computer: Player;
+  player1: Player;
+  playingTurn: Player;
+  board: any[];
+  isGameOver: boolean;
+  isBoardLocked: boolean;
+  winner: Player;
+
+  get winningPatterns() {
+    return [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+  }
 
   constructor(
     private gameService: GameService,
@@ -20,10 +31,84 @@ export class NewGameComponent implements OnInit {
     this.getAllPlayers();
   }
 
+  startGame() {
+    this.isGameOver = false;
+    this.isBoardLocked = false;
+
+    this.board = [ { value: '' }, { value: '' }, { value: '' },  { value: '' }, { value: '' }, { value: '' }, { value: '' }, { value: '' }, { value: '' }];
+
+    if (this.playingTurn == this.computer) {
+      this.isBoardLocked = true;
+      this.computerTurn();
+    }
+  }
+
+  computerTurn() {
+    this.isBoardLocked = true;
+
+    setTimeout(() => {
+      let availableSquares = this.board.filter(s => s.value === '');
+      var squareIndex = Math.floor(Math.random() * (availableSquares.length - 1 - 0 + 1)) + 0;
+      let square = availableSquares[squareIndex];
+      square.value = this.computer.symbol;
+      this.checkMove(this.computer);
+      this.isBoardLocked = false;
+    }, 600);
+  }
+
+  checkMove(player: Player) {
+    if (this.checkWin(player)) { this.EndGame(player); }
+
+    const availableSquares = this.board.filter(s => s.value == '').length > 0;
+    if (!availableSquares)
+      this.EndGame(null);
+    else {
+      this.playingTurn = (this.playingTurn == this.computer ? this.player1 : this.computer);
+      if (this.playingTurn == this.computer)
+        this.computerTurn();
+    }
+  }
+
+  EndGame(player: Player) {
+    this.isGameOver = true;
+    this.winner = player;
+
+    if (player !== null)
+      this.playingTurn = player;
+  }
+
+
+  checkWin(player: Player): boolean {
+    for (let pattern of this.winningPatterns) {
+      const winner = this.board[pattern[0]].value == player.symbol && this.board[pattern[1]].value == player.symbol
+        && this.board[pattern[2]].value == player.symbol;
+
+      if (winner) {
+        for (let index of pattern) {
+          this.board[index].winner = true;
+        }
+        return true;
+      }
+    }
+    return false;
+  }
+
+  
+  selectSquare(square) {
+    if(square.value === '' && !this.isGameOver) {
+      square.value = this.player1.symbol;
+      this.checkMove(this.player1);
+    }
+  }
+
 
   getAllPlayers(): void {
     this.playerService.getAllPlayers().subscribe(players => {
+      this.computer = players.find(a => a.playerName === "Computer");
+      this.player1 = players.find(a => a.playerName === "Player1");
+      this.playingTurn = this.player1;
       this.playerList = players;
+      this.startGame();
     });
   }
 

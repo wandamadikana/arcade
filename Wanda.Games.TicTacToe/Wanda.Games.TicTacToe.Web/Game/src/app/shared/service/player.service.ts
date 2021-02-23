@@ -7,13 +7,13 @@ import { Player } from '../models/player.model';
   providedIn: 'root'
 })
 export class PlayerService {
-  readonly rootUrl = 'http://localhost:56571';
+  readonly rootUrl = 'https://localhost:44387/';
   reqHeaders = new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'True' });
   constructor(private http: HttpClient) { }
 
   
   getAllPlayers(): Observable<Player[]> {
-    return this.http.get<Player[]>(this.rootUrl + `api/player`, { headers: this.reqHeaders });
+    return this.http.get<Player[]>(this.rootUrl + `api/player`);
   }
 
   getPlayerById(playerId: number): Observable<Player> {

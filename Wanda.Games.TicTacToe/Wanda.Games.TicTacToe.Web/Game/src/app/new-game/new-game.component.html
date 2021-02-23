@@ -29,24 +29,45 @@
 </div>
 
 <div class="card-container">
-    <div class="card card-small" tabindex="0">
+    <div class="card card-small" tabindex="0" *ngIf="isGameOver" (click)="startGame()">
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
         </svg>
-        <span>New Game</span>
+        <span>Start New Game</span>
     </div>
 
-    <div class="card card-small" tabindex="0">
+    <div class="card card-small" tabindex="0"  (click)="startGame()">
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
         </svg>
         <span>Reset Game</span>
     </div>
 </div>
-<ul *ngFor="let player of playerList">
-    <li>
-        <mat-icon mat-list-icon>person</mat-icon>
-        <div mat-line>{{player.playerName}} - {{player.symbol}</div>
-    </li>
 
-</ul>
+<div class="card-container">
+    <ul *ngFor="let player of playerList">
+        <li>
+            <div>{{player.playerName}} = {{player.symbol}}</div>
+        </li>
+    </ul>
+</div>
+
+<div class="card-container">
+    <span class="result-span" *ngIf="!isGameOver && computer === playingTurn"> {{ playingTurn.playerName }}'s turn</span>
+    <span class="result-span computer-win" *ngIf="isGameOver && winner === computer">{{ computer.playerName }} wins</span>
+    <span class="result-span" *ngIf="isGameOver && winner === null">It's a draw</span>
+</div>
+
+<div class="card-container">
+    <div id="board" [class.locked]="isBoardLocked || isGameOver">
+        <div *ngFor="let square of board" class="square" [class.checked]="square.value != ''"
+            [class.winner]="square.winner" (click)="selectSquare(this.square)">
+            {{ square.value }}
+        </div>
+    </div>
+</div>
+
+<div class="card-container">
+    <span class="result-span" *ngIf="!isGameOver && player1 === playingTurn"> {{ playingTurn.playerName }}'s turn</span>
+    <span class="result-span player-win" *ngIf="isGameOver && winner === player1">{{ player1.playerName }} wins</span>
+</div>
