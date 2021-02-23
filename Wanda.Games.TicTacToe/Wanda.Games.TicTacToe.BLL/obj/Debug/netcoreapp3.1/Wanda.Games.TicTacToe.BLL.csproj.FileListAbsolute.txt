@@ -1,0 +1,9 @@
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.deps.json
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.dll
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.pdb
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.csprojAssemblyReference.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.csproj.CoreCompileInputs.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.AssemblyInfoInputs.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.AssemblyInfo.cs
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.dll
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.BLL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.BLL.pdb

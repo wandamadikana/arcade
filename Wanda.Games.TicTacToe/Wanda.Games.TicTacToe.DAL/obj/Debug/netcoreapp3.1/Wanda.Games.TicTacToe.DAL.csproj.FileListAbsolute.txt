@@ -1,0 +1,16 @@
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.deps.json
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.dll
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.csprojAssemblyReference.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.AssemblyInfoInputs.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.AssemblyInfo.cs
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.runtimeconfig.json
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.runtimeconfig.dev.json
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.genruntimeconfig.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.csproj.CoreCompileInputs.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.dll.config
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.pdb
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Model.dll
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Model.pdb
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.csproj.CopyComplete
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.dll
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.DAL\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.DAL.pdb

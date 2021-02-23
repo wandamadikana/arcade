@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wanda.Games.TicTacToe.DAL\Wanda.Games.TicTacToe.DAL.csproj" />
+    <ProjectReference Include="..\Wanda.Games.TicTacToe.Interface\Wanda.Games.TicTacToe.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
