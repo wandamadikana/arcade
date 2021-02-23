@@ -65,6 +65,12 @@ namespace Wanda.Games.TicTacToe.DAL
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Winner)
+                    .IsRequired(false)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+
                 entity.Property(e => e.DateCreated).HasColumnType("datetime");
 
                 entity.Property(e => e.LastUpdated).HasColumnType("datetime");

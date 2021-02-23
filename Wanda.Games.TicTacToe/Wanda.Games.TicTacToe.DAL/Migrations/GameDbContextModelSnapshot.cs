@@ -40,6 +40,11 @@ namespace Wanda.Games.TicTacToe.DAL.Migrations
                     b.Property<DateTime?>("LastUpdated")
                         .HasColumnType("datetime");
 
+                    b.Property<string>("Winner")
+                        .HasMaxLength(255)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(255)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Game");
@@ -119,8 +124,8 @@ namespace Wanda.Games.TicTacToe.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 2, 23, 2, 29, 56, 212, DateTimeKind.Local).AddTicks(1346),
-                            LastUpdated = new DateTime(2021, 2, 23, 2, 29, 56, 214, DateTimeKind.Local).AddTicks(7256),
+                            DateCreated = new DateTime(2021, 2, 23, 10, 16, 13, 564, DateTimeKind.Local).AddTicks(2291),
+                            LastUpdated = new DateTime(2021, 2, 23, 10, 16, 13, 568, DateTimeKind.Local).AddTicks(4660),
                             PlayerDescription = "BB-8 (or Beebee-Ate) AKA droid",
                             PlayerName = "Computer",
                             Symbol = "o"
@@ -128,8 +133,8 @@ namespace Wanda.Games.TicTacToe.DAL.Migrations
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(2021, 2, 23, 2, 29, 56, 214, DateTimeKind.Local).AddTicks(8182),
-                            LastUpdated = new DateTime(2021, 2, 23, 2, 29, 56, 214, DateTimeKind.Local).AddTicks(8209),
+                            DateCreated = new DateTime(2021, 2, 23, 10, 16, 13, 568, DateTimeKind.Local).AddTicks(5585),
+                            LastUpdated = new DateTime(2021, 2, 23, 10, 16, 13, 568, DateTimeKind.Local).AddTicks(5612),
                             PlayerDescription = "You AKA Human",
                             PlayerName = "Player1",
                             Symbol = "x"

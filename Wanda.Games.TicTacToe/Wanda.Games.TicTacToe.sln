@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wanda.Games.TicTacToe.Inter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wanda.Games.TicTacToe.Model", "Wanda.Games.TicTacToe.Model\Wanda.Games.TicTacToe.Model.csproj", "{024192A2-5649-47BB-9D18-DF807B2F5070}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wanda.Games.TicTacToe.Utility", "Wanda.Games.TicTacToe.Utility\Wanda.Games.TicTacToe.Utility.csproj", "{02CD5230-3D3F-4CF0-92C7-954768EC3D34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{024192A2-5649-47BB-9D18-DF807B2F5070}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{024192A2-5649-47BB-9D18-DF807B2F5070}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{024192A2-5649-47BB-9D18-DF807B2F5070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02CD5230-3D3F-4CF0-92C7-954768EC3D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02CD5230-3D3F-4CF0-92C7-954768EC3D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02CD5230-3D3F-4CF0-92C7-954768EC3D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02CD5230-3D3F-4CF0-92C7-954768EC3D34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{DF611439-98B1-47D8-A8AB-E52BC95B49BD} = {E6B2B0DC-EC10-434C-B8C7-1E47D02A7861}
 		{1D9F4322-040F-4791-BAAC-60BDCC34EAD1} = {975698B2-F4D2-48A9-8916-6B1A6F4D5A4C}
 		{024192A2-5649-47BB-9D18-DF807B2F5070} = {975698B2-F4D2-48A9-8916-6B1A6F4D5A4C}
+		{02CD5230-3D3F-4CF0-92C7-954768EC3D34} = {975698B2-F4D2-48A9-8916-6B1A6F4D5A4C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B42CFF99-872B-4EA3-ACD4-2BFD17FBF4EC}

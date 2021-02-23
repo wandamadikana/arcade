@@ -5,20 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Wanda.Games.TicTacToe.BLL\Wanda.Games.TicTacToe.BLL.csproj" />
     <ProjectReference Include="..\Wanda.Games.TicTacToe.DAL\Wanda.Games.TicTacToe.DAL.csproj" />
     <ProjectReference Include="..\Wanda.Games.TicTacToe.Interface\Wanda.Games.TicTacToe.Interface.csproj" />
     <ProjectReference Include="..\Wanda.Games.TicTacToe.Model\Wanda.Games.TicTacToe.Model.csproj" />
+    <ProjectReference Include="..\Wanda.Games.TicTacToe.Repository\Wanda.Games.TicTacToe.Repository.csproj" />
+    <ProjectReference Include="..\Wanda.Games.TicTacToe.Utility\Wanda.Games.TicTacToe.Utility.csproj" />
   </ItemGroup>
 
 

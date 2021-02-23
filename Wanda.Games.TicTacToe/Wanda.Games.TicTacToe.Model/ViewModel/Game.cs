@@ -8,6 +8,7 @@ namespace Wanda.Games.TicTacToe.Model.ViewModel
     {
         public int Id { get; set; }
         public string GameName { get; set; }
+        public string Winner { get; set; }
         public DateTime? LastUpdated { get; set; }
         public DateTime? DateCreated { get; set; }
     }

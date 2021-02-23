@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "A4f1ZHRi8sR2aVhiM8KidaBkJdhO1X+a6UZ1e0hIzn2KnanBoJwWF5OVmBpWIojHu4WTtkWDZnzs1H5F0hZM7g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\wanda\\source\\repos\\arcade\\arcade\\Wanda.Games.TicTacToe\\Wanda.Games.TicTacToe.Utility\\Wanda.Games.TicTacToe.Utility.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wanda\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\wanda\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\wanda\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

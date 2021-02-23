@@ -1,0 +1,12 @@
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.deps.json
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.dll
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.csprojAssemblyReference.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.AssemblyInfoInputs.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.AssemblyInfo.cs
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.csproj.CoreCompileInputs.cache
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.pdb
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Model.dll
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\bin\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Model.pdb
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.csproj.CopyComplete
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.dll
+C:\Users\wanda\source\repos\arcade\arcade\Wanda.Games.TicTacToe\Wanda.Games.TicTacToe.Utility\obj\Debug\netcoreapp3.1\Wanda.Games.TicTacToe.Utility.pdb

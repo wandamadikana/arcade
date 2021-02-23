@@ -11,7 +11,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Wanda.Games.TicTacToe.BLL;
 using Wanda.Games.TicTacToe.DAL;
+using Wanda.Games.TicTacToe.Interface.Game;
+using Wanda.Games.TicTacToe.Interface.Repository;
+using Wanda.Games.TicTacToe.Repository.Helpers;
+using Wanda.Games.TicTacToe.Utility;
 
 namespace Wanda.Games.TicTacToe.API
 {
@@ -27,9 +32,27 @@ namespace Wanda.Games.TicTacToe.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<GameDbContext>(options =>
-           options.UseSqlServer(Configuration.GetConnectionString("GameDatabase")));
+            services.AddRouting(options => options.LowercaseUrls = true);
+            services.AddDbContext<GameDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("GameDatabase")));
             services.AddControllers();
+            services.AddTransient<IRepositoryProvider, RepositoryProvider>();
+            services.AddTransient<RepositoryFactory, RepositoryFactory>();
+            services.AddTransient<IDBContextProvider, DBContextProvider>();
+            services.AddTransient<IGameManager, GameManager>();
+            services.AddTransient<IPlayerManager, PlayerManager>();
+
+
+            services.AddAutoMapper(typeof(MapperProfile));
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "Dilated Technologies Recruitment",
+                    Version = "v2",
+                    Description = "Dilated Technologies Recruitment",
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +63,14 @@ namespace Wanda.Games.TicTacToe.API
                 app.UseDeveloperExceptionPage();
             }
 
+
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v2/swagger.json", "Recruitment Services");
+
+            }
+            );
             app.UseHttpsRedirection();
 
             app.UseRouting();
