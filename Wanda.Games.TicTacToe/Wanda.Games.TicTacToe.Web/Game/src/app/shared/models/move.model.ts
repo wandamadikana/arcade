@@ -1,4 +1,4 @@
-export class Game {
+export class Move {
     id: number;
     moveCode: string;
     gameId: number;

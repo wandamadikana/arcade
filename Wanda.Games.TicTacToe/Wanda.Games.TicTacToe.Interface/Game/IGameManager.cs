@@ -13,5 +13,6 @@ namespace Wanda.Games.TicTacToe.Interface.Game
         Task<int> AddGame(Model.ViewModel.Game game);
         Task UpdateGame(Model.ViewModel.Game game);
         Task DeleteGame(int Id);
+        Task AddMoves(List<Model.ViewModel.Move> moveItems);
     }
 }

@@ -44,7 +44,7 @@ namespace Wanda.Games.TicTacToe.API.Controllers
         [HttpPost]
         public async Task<int> GamePost([FromBody]Game game)
         {
-           return await _gameManager.AddGame(game);
+            return await _gameManager.AddGame(game);
         }
 
         [HttpPut]
@@ -61,6 +61,17 @@ namespace Wanda.Games.TicTacToe.API.Controllers
             await _gameManager.DeleteGame(id);
         }
 
+        #endregion
+
+        #region Game
+
+        // POST api/game
+        [Route("move")]
+        [HttpPost]
+        public async Task MovePost([FromBody]List<Move> moves)
+        {
+            await _gameManager.AddMoves(moves);
+        }
         #endregion
 
     }

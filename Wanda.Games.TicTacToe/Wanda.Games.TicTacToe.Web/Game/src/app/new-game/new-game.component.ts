@@ -4,6 +4,7 @@ import { PlayerService } from 'src/app/shared/service/player.service';
 import { Game } from '../shared/models/game.model';
 import { Player } from '../shared/models/player.model';
 import * as moment from 'moment';
+import { Move } from '../shared/models/move.model';
 
 @Component({
   selector: 'app-new-game',
@@ -21,7 +22,7 @@ export class NewGameComponent implements OnInit {
   isBoardLocked: boolean;
   winner: Player;
   currentGame: Game;
-  
+
 
   get winningPatterns() {
     return [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
@@ -82,6 +83,7 @@ export class NewGameComponent implements OnInit {
     this.currentGame.winner = player.playerName;
 
     this.updateGame(this.currentGame);
+    this.addMoves(this.convertBoardToMoves());
     if (player !== null)
       this.playingTurn = player;
   }
@@ -104,8 +106,6 @@ export class NewGameComponent implements OnInit {
 
 
   selectSquare(square) {
-    console.log(square);
-    console.log(this.board);
     if (square.value === '' && !this.isGameOver) {
       square.value = this.player1.symbol;
       this.checkMove(this.player1);
@@ -130,8 +130,26 @@ export class NewGameComponent implements OnInit {
     for (let i = 0; i < lengthOfCode; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-      return text;
+    return text;
   }
+
+  convertBoardToMoves() {
+    let moveList: Move[]=[];
+    this.board.forEach((item, index) => {
+      const newPlayerId = this.playerList.find(a => a.symbol === item.value)?.id;
+      const newMove: Move = {
+        id: 0,
+        gameId: this.currentGame.id,
+        moveCode: index.toString(),
+        playerId: newPlayerId ?? null,
+        lastUpdated: `${moment(new Date()).format('YYYY-MM-DD')}`,
+        dateCreated: `${moment(new Date()).format('YYYY-MM-DD')}`
+      };
+      moveList.push(newMove);
+    });
+    return moveList;
+  }
+
 
   getAllPlayers(): void {
     this.playerService.getAllPlayers().subscribe(players => {
@@ -152,4 +170,9 @@ export class NewGameComponent implements OnInit {
   updateGame(game: Game): void {
     this.gameService.updateGame(game).subscribe();
   }
+
+  addMoves(moves: Move[]): void {
+    this.gameService.addMoves(moves).subscribe();
+  }
+
 }

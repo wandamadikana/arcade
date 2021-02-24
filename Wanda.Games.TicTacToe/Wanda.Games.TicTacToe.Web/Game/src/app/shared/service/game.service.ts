@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Game } from '../models/game.model';
+import { Move } from '../models/move.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,10 @@ export class GameService {
 
   updateGame(game: Game) {
     return this.http.put(this.rootUrl + 'api/game', game);
+  }
+
+  addMoves(moves: Move[])  {
+    return this.http.post(this.rootUrl + 'api/game/move', moves);
   }
 
 }

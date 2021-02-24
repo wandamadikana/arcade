@@ -13,6 +13,7 @@ namespace Wanda.Games.TicTacToe.BLL
     public class GameManager : IGameManager, IDisposable
     {
         private IBaseRepository<Model.DTO.Game> GameDetail { get { return GetStandardRepo<Model.DTO.Game>(); } }
+        private IBaseRepository<Model.DTO.Move> MoveDetail { get { return GetStandardRepo<Model.DTO.Move>(); } }
         public DbContext GameDbContext { get; set; }
         protected IRepositoryProvider RepositoryProvider { get; set; }
         protected IDBContextProvider DBContextProvider { get; set; }
@@ -62,6 +63,17 @@ namespace Wanda.Games.TicTacToe.BLL
         {
             var entity = await GameDetail.GetByIdAsync(ID);
             await GameDetail.DeleteAsync(mapper.Map<Model.DTO.Game>(entity));
+        }
+
+        #endregion
+
+        #region Moves
+        public async Task AddMoves(List<Model.ViewModel.Move> moveItems)
+        {
+            foreach (var item in moveItems)
+            {
+                await MoveDetail.AddAsync(mapper.Map<Model.DTO.Move>(item));
+            }
         }
 
         #endregion

@@ -99,6 +99,7 @@ namespace Wanda.Games.TicTacToe.DAL
                 entity.HasOne(d => d.Player)
                     .WithMany(p => p.Move)
                     .HasForeignKey(d => d.PlayerId)
+                    .IsRequired(false)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Move_Player");
             });
