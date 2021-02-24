@@ -42,9 +42,9 @@ namespace Wanda.Games.TicTacToe.API.Controllers
 
         // POST api/game
         [HttpPost]
-        public async Task GamePost([FromBody]Game game)
+        public async Task<int> GamePost([FromBody]Game game)
         {
-            await _gameManager.AddGame(game);
+           return await _gameManager.AddGame(game);
         }
 
         [HttpPut]

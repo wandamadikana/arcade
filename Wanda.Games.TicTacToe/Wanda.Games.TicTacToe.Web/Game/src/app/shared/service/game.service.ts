@@ -20,8 +20,8 @@ export class GameService {
     return this.http.get<Game>(this.rootUrl + `api/game/id?id${gameId}`);
   }
   
-  addGame(game: Game) {
-    return this.http.post(this.rootUrl + 'api/game', game);
+  addGame(game: Game): Observable<number>  {
+    return this.http.post<number>(this.rootUrl + 'api/game', game);
   }
 
   updateGame(game: Game) {

@@ -53,7 +53,7 @@
 </div>
 
 <div class="card-container">
-    <span class="result-span" *ngIf="!isGameOver && computer === playingTurn"> {{ playingTurn.playerName }}'s turn</span>
+    <span class="result-span" *ngIf="!isGameOver && computer === playingTurn"> {{ playingTurn?.playerName }}'s turn</span>
     <span class="result-span computer-win" *ngIf="isGameOver && winner === computer">{{ computer.playerName }} wins</span>
     <span class="result-span" *ngIf="isGameOver && winner === null">It's a draw</span>
 </div>
@@ -68,6 +68,6 @@
 </div>
 
 <div class="card-container">
-    <span class="result-span" *ngIf="!isGameOver && player1 === playingTurn"> {{ playingTurn.playerName }}'s turn</span>
+    <span class="result-span" *ngIf="!isGameOver && player1 === playingTurn"> {{ playingTurn?.playerName }}'s turn</span>
     <span class="result-span player-win" *ngIf="isGameOver && winner === player1">{{ player1.playerName }} wins</span>
 </div>

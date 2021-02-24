@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Wanda.Games.TicTacToe.Interface.Game;
@@ -47,9 +48,11 @@ namespace Wanda.Games.TicTacToe.BLL
         {
             return mapper.Map<Model.ViewModel.Game>(await GameDetail.GetByIdAsync(Id));
         }
-        public async Task AddGame(Model.ViewModel.Game game)
+        public async Task<int> AddGame(Model.ViewModel.Game game)
         {
             await GameDetail.AddAsync(mapper.Map<Model.DTO.Game>(game));
+            var entity = await GameDetail.GetItemsAsync(a => a.GameName == game.GameName);
+            return entity.FirstOrDefault().Id;
         }
         public async Task UpdateGame(Model.ViewModel.Game game)
         {

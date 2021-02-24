@@ -10,7 +10,7 @@ namespace Wanda.Games.TicTacToe.Interface.Game
     {
         Task<List<Model.ViewModel.Game>> GetAllGames();
         Task<Model.ViewModel.Game> GetGameById(int id);
-        Task AddGame(Model.ViewModel.Game game);
+        Task<int> AddGame(Model.ViewModel.Game game);
         Task UpdateGame(Model.ViewModel.Game game);
         Task DeleteGame(int Id);
     }
