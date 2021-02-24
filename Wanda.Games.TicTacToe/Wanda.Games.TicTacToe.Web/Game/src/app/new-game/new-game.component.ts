@@ -79,7 +79,6 @@ export class NewGameComponent implements OnInit {
   EndGame(player: Player) {
     this.isGameOver = true;
     this.winner = player;
-    console.log('EndGame this.currentGame', this.currentGame);
     this.currentGame.winner = player.playerName;
 
     this.updateGame(this.currentGame);
@@ -105,6 +104,8 @@ export class NewGameComponent implements OnInit {
 
 
   selectSquare(square) {
+    console.log(square);
+    console.log(this.board);
     if (square.value === '' && !this.isGameOver) {
       square.value = this.player1.symbol;
       this.checkMove(this.player1);
@@ -124,7 +125,7 @@ export class NewGameComponent implements OnInit {
   }
 
   makeRandomGameName(lengthOfCode: number) {
-    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,./;'[]\=-)(*&^%$#@!~`";
+    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
     let text = "";
     for (let i = 0; i < lengthOfCode; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
@@ -145,7 +146,6 @@ export class NewGameComponent implements OnInit {
   addGame(game: Game): void {
     this.gameService.addGame(game).subscribe(gameId => {
       this.currentGame.id = gameId;
-      console.log('addGame this.currentGame', this.currentGame);
     });
   }
 

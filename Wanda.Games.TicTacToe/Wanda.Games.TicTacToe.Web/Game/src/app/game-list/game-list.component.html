@@ -1,1 +1,25 @@
-<p>game-list works!</p>
+<div>
+    <h1>My Games</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Game Name</th>
+                <th>Winner</th>
+                <th>Created Date</th>                          
+                <!-- <th>Action</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let game of gameList">
+                <td>{{game.id}}</td>
+                <td>{{game.gameName}}</td>
+                <td>{{game.winner}}</td>
+                <td>{{game.dateCreated}}</td>
+                <td>
+                    <!-- <button type="button" [routerLink]="['/game-detail/', game.id]">View</button> -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
