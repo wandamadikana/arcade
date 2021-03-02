@@ -38,7 +38,7 @@ export class NewGameComponent implements OnInit {
 
   startGame() {
     const gameName = this.makeRandomGameName(10);
-    this.currentGame = this.populateRegisterUser(0, gameName, '')
+    this.currentGame = this.populateNewGame(0, gameName, '')
     this.addGame(this.currentGame);
     this.isGameOver = false;
     this.isBoardLocked = false;
@@ -113,7 +113,7 @@ export class NewGameComponent implements OnInit {
   }
 
 
-  populateRegisterUser(gameId: number, gameName: string, gameWinner: string): Game {
+  populateNewGame(gameId: number, gameName: string, gameWinner: string): Game {
     const newGame: Game = {
       id: gameId,
       gameName: gameName,
