@@ -49,9 +49,9 @@ namespace Wanda.Games.TicTacToe.API
             {
                 options.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = "Dilated Technologies Recruitment",
+                    Title = "Game",
                     Version = "v2",
-                    Description = "Dilated Technologies Recruitment",
+                    Description = "Game",
                 });
             });
         }
